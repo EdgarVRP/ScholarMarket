@@ -14,19 +14,19 @@ main {
     width: 100%;
     height: 350px;
 
-    background: url(../img/ContactUs.png);
+    background: url(../assets/img/ContactUs.png);
     background-position: center 50%;
     background-size: cover;
     border: 1px solid #000000;
 
 }
 
-ul {
+.listaInfoContacto {
     list-style: none;
     text-align: left;
 }
 
-ul li {
+.listaInfoContacto li {
     margin: 15px 20%;
 }
 
