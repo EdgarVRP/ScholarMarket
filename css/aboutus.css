@@ -65,7 +65,7 @@ i{
 .card{
     border: 1px solid #C98474;
 }
-img{
+.card img{
     width: 50%;
     height: auto;
 }
