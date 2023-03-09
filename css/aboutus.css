@@ -5,9 +5,7 @@ body{
 a{
     text-decoration:none;
 }
-.img-L{
-    width: 100%;
-}
+
 .container-mv{
     margin-top: 100px;
     background-color: #874c62;
@@ -65,7 +63,7 @@ i{
 .card{
     border: 1px solid #C98474;
 }
-img{
+.card img{
     width: 50%;
     height: auto;
 }
