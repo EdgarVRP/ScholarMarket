@@ -71,3 +71,7 @@ textarea {
     text-align: left;
     padding: 10px 20%;
 }
+
+#maileador{
+    display: none;
+}
