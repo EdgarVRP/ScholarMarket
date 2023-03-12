@@ -7,8 +7,13 @@ btnsubmit.addEventListener('click', (e) => {
     e.preventDefault();
     if (phoneRegex1.test(phone.value)) {
         alert('Mensaje enviado');
-        console.log(phone.value);
+        document.getElementById('nombre').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('telefono').value = '';
+        document.getElementById('asunto').value = '';
+        document.getElementById('mensaje').value = '';
     } else {
         alert('El telefono no es valido');
     }
+    
 });
