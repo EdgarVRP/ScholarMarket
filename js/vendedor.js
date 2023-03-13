@@ -1,6 +1,8 @@
 let tabla = document.getElementById("tablaProductos");
 let tablaCompradores = document.getElementById("tablaCompradores");
-//Realizando peticion get al archivo data.json
+
+if (localStorage.getItem("productos") === null) {
+  //Realizando peticion get al archivo data.json si no hay datos en local storage
 var productos=[];
 fetch('../vendedor-test/vendedor.json')
   .then(response=>response.json())
@@ -13,18 +15,26 @@ fetch('../vendedor-test/vendedor.json')
   .catch(function(error) {
     console.error('Error al realizar la petición:', error);
   });
+}
+else{
+  //Obteniendo datos de local storage
+  productos = JSON.parse(localStorage.getItem('productos'));
+}
 //Estableciendo el id de usuario en localstorage
 localStorage.setItem('id', 1);
 //Obteniedno id de usuario por localstorage
 let id = localStorage.getItem('id');
 //timmer de .5 segundos para que se ejecute la peticion get
+let productosLocalStorage =[];
 setTimeout(function(){
-//Obteniendo el los datos del usuario por el id en un objeto JSON ubicado en el archivo data.json
+  //Vaciando datos de JSON a local storage
 //console.log(productos);
-let producto = productos.find(vendedor => vendedor.idVendedor == id);
-//console.log(producto);
+localStorage.setItem('productos', JSON.stringify(productos));
+//Obteniendo datos de local storage
+productosLocalStorage = JSON.parse(localStorage.getItem('productos'));
+//console.log(productosLocalStorage);
 // Agregar cada producto a la tabla.
-productos.forEach(function(producto) {
+productosLocalStorage.forEach(function(producto) {
   let fila = tabla.insertRow();
   // Agregar la celda para el nombre del producto y con un id de nombreProducto.
   fila.setAttribute("id", producto.nombre);
@@ -34,6 +44,7 @@ productos.forEach(function(producto) {
   // Agregar la celda para la imagen del producto.
   let celdaImagen = fila.insertCell(1);
   let imagen = document.createElement("img");
+  //imagen.src = "data:image/png;base64," + base64String;
   imagen.src = producto.rutaImagen;
   imagen.width = 100;
   celdaImagen.appendChild(imagen);
@@ -52,16 +63,17 @@ productos.forEach(function(producto) {
   botonModal.innerHTML = "Ver compradores";
   celdaModal.appendChild(botonModal);
   fila.insertCell(4).innerHTML = producto.ventasCompletas;
+  fila.insertCell(5).innerHTML = producto.precio;
   //Modal editar producto
-  let celdaEditar = fila.insertCell(5);
+  let celdaEditar = fila.insertCell(6);
   let botonEditar = document.createElement("button");
-  botonEditar.setAttribute("class", "btn btn-warning btnEditarProducto");
+  botonEditar.setAttribute("class", "btn btn-warning btnEditarProducto table-col-sm-12");
   botonEditar.setAttribute("data-bs-toggle", "modal");
   botonEditar.setAttribute("data-bs-target", "#modalEditarProducto");
   botonEditar.innerHTML = "Editar";
   celdaEditar.appendChild(botonEditar);
   //Modal eliminar producto
-  let celdaEliminar = fila.insertCell(6);
+  let celdaEliminar = fila.insertCell(7);
   let botonEliminar = document.createElement("button");
   botonEliminar.setAttribute("class", "btn btn-danger");
   botonEliminar.setAttribute("data-bs-toggle", "modal");
@@ -116,6 +128,10 @@ on(document, "click", ".btnCompradores", (e) => {
 on(document, "click", ".btnCancelarModalCompradores", (e) => {
   tablaCompradores.innerHTML = "";
 });
+on(document, "click", "#btnCerrarModalCompradores", (e) => {
+  tablaCompradores.innerHTML = "";
+});
+
 //evento para editar producto
 on(document, "click", ".btnEditarProducto", (e) => {
   console.log("Se presiono el boton editar");
@@ -130,4 +146,42 @@ on(document, "click", ".btnEditarProducto", (e) => {
   console.log(descripcionProducto);
   let ventasCompletas = e.target.parentNode.parentNode.childNodes[4].innerHTML;
   console.log(ventasCompletas);
+});
+
+//evento para añadir producto
+const btnCrearProducto = document.getElementById("btnCrearProducto");
+on(document, "click", "#btnCrearProducto", (e) => {
+  //e.preventDefault();
+  console.log("Se presiono el boton crear producto");
+  //obteniendo el id de la fila
+  let nombreProducto = document.getElementById("nombreProducto").value;
+  let descripcionProducto = document.getElementById("descripcionProducto").value;
+  let precioProducto = document.getElementById("precioProducto").value;
+  let CategoriaProducto = document.getElementById("CategoriaProducto").value;
+  let lugarVentaProducto = document.getElementById("lugarVentaProducto").value;
+  let imagenProducto = document.getElementById("imagenProducto").value;
+  //Guardando imagen en el local storage
+  console.log(nombreProducto);
+  console.log(descripcionProducto);
+  console.log(precioProducto);
+  console.log(CategoriaProducto);
+  console.log(lugarVentaProducto);
+  console.log(imagenProducto);
+  //añadiendo producto al local storage
+  let producto = {
+    idProducto: 0,
+    nombre: nombreProducto,
+    descripcion: descripcionProducto,
+    precio: precioProducto,
+    categoria: CategoriaProducto,
+    lugarVenta: lugarVentaProducto,
+    rutaImagen: imagenProducto,
+    ventasCompletas: 0,
+    compradores: [],
+    venta: []
+  };
+  console.log(producto);
+  productosLocalStorage.push(producto);
+  console.log(productosLocalStorage);
+  localStorage.setItem("productos", JSON.stringify(productosLocalStorage));
 });
