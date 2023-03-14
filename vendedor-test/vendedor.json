@@ -1,0 +1,111 @@
+[
+   {
+      "idUsuario":1,
+      "idVendedor":1,
+      "idProducto":1,
+      "nombre":"Producto 1",
+      "rutaImagen":"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nisl nisl aliquet mauris, eget aliquam nisl nunc",
+"precio":85,
+"categoria":"libros",
+"lugarVenta":"UNAM",
+"ventasCompletas":10,
+      "compradores":[
+         {
+            "idComprador":1,
+            "idUsuario":1,
+            "nombre":"Comprador 1"
+         },
+         {
+            "idComprador":2,
+            "idUsuario":2,
+            "nombre":"Comprador 2"
+         },
+         {
+            "idComprador":3,
+            "idUsuario":3,
+            "nombre":"Comprador 3"
+         }
+      ],
+"venta":[
+         {
+      "idVendedor":1,
+      "idProducto":1,
+            "idComprador":1,
+            "nombreComprador":"Comprador 1",
+            "idVenta":1,
+            "mensajeAlComprador":"Mensaje del vendedor 1",
+            "mensajeAlVendedor":"Mensaje del comprador 1",
+            "rutaComprobante":"ruta",
+            "fechaPago":"2021-05-05",
+            "fechaEntrega":"2021-05-05"
+         },
+         {
+      "idVendedor":2,
+      "idProducto":2,
+            "idComprador":2,
+            "nombreComprador":"Comprador 2",
+            "idVenta":2,
+            "mensajeAlComprador":"Mensaje del vendedor 2",
+            "mensajeAlVendedor":"Mensaje del comprador 2",
+            "rutaComprobante":"ruta",
+            "fechaPago":"2021-05-05",
+            "fechaEntrega":"2021-05-05"
+         }
+      ]
+   },
+   {
+      "idUsuario":2,
+      "idVendedor":2,
+      "idProducto":2,
+      "nombre":"Producto 2",
+      "rutaImagen":"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nisl nisl aliquet mauris, eget aliquam nisl nunc",
+"precio":95,
+"categoria":"libros",
+"lugarVenta":"UNAM",
+"ventasCompletas":20,
+      "compradores":[
+         {
+            "idComprador":1,
+            "idUsuario":1,
+            "nombre":"Comprador 1"
+         },
+         {
+            "idComprador":2,
+            "idUsuario":2,
+            "nombre":"Comprador 2"
+         },
+         {
+            "idComprador":3,
+            "idUsuario":3,
+            "nombre":"Comprador 3"
+         }],
+"venta":[
+         {
+      "idVendedor":1,
+      "idProducto":1,
+            "idComprador":1,
+            "nombreComprador":"Comprador 1",
+            "idVenta":1,
+            "mensajeAlVendedor":"Mensaje del vendedor 1",
+            "mensajeAlComprador":"Mensaje del comprador 1",
+            "rutaComprobante":"ruta",
+            "fechaPago":"2021-05-05",
+            "fechaEntrega":"2021-05-05"
+         },
+         {
+      "idVendedor":2,
+      "idProducto":2,
+            "idComprador":2,
+            "nombreComprador":"Comprador 2",
+            "idVenta":2,
+            "mensajeAlComprador":"Mensaje del vendedor 2",
+            "mensajeAlVendedor":"Mensaje del comprador 2",
+            "rutaComprobante":"ruta",
+            "fechaPago":"2021-05-05",
+            "fechaEntrega":"2021-05-05"
+         }
+      ]
+   }
+]
