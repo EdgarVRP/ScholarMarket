@@ -1,0 +1,113 @@
+.img-products{
+    width: 100%;
+    height: auto;
+}
+
+.main-btn{
+    background-color: #874c62;
+    border-color: #7b4559;
+    border-radius: 5px;
+}
+.main-btn:active{
+    background-color: #7b4559;
+    border-color: #7b4559;
+}
+.main-btn:visited{
+    background-color: #7b4559 ;
+    border-color: #7b4559 ;
+}
+.secondary-btn{
+    background-color: #f2d388;
+    border-color: #bba56b;
+    border-radius: 5px;
+}
+.secondary-btn:active{
+    background-color: #bba56b;
+    border-color: #bba56b;
+}
+.secondary-btn:visited{
+    background-color: #bba56b ;
+    border-color: #bba56b ;
+}
+
+.description{
+    font-size: 18px;
+}
+
+hr{
+    color: #874c62;
+}
+
+h4{
+    font-size: 22px;
+}
+h3{
+    font-size: 25px;
+}
+
+                                /* Aqui comienzan las media queries  */
+    
+    /* Estilos para dispositivos móviles */
+    @media only screen and (max-width: 767px) {
+    
+        /* Estilos para dispositivos con ancho máximo de 767px */
+        
+    }
+    
+    
+    /* Estilos para tabletas */
+    @media only screen and (min-width: 768px) {
+    
+        /* Estilos para dispositivos con ancho mínimo de 768px y ancho máximo de 1080px */
+        h4{
+            font-size: 28px;
+        }
+        h3{
+            font-size: 30px;
+        }
+        .description{
+            font-size: 20px;
+        }
+        .button-text{
+            font-size: 25px;
+        }
+        .img-products{
+            width: 70%;
+            height: auto;
+        }
+
+    }
+    
+    
+    /* Estilos para pantallas de escritorio */
+    @media only screen and (min-width: 1080px) {
+    
+        /* Estilos para dispositivos con ancho mínimo de 1080px y ancho máximo de 1400px */
+        .button-text{
+            font-size: 30px;
+        }
+        .img-products{
+            width: 60%;
+            height: auto;
+        }
+    }
+    
+    @media only screen and (min-width: 1400px) {
+        /* Estilos para dispositivos con ancho mínimo de 1400px */
+        h4{
+            font-size: 32px;
+        }
+        h3{
+            font-size: 34px;
+        }
+        .description{
+            font-size: 24px;
+        }
+        .button-text{
+            font-size: 32px;
+        }
+        .img-products{
+            width: 50%;
+            height: auto;
+        }
+    }

@@ -7,13 +7,22 @@
         box-sizing: border-box;
         font-family: 'Montserrat', sans-serif;
     }
+
+    body::-webkit-scrollbar{
+        width: 10px;
+        background: #874c62;
+    }
+    body::-webkit-scrollbar-thumb{
+        background: #4d2b37;
+        border-radius: 10px;
+    }
     
     button{
         background-color: transparent;
     }
     
     main{
-        min-height: 70vh;
+        min-height: 90vh;
     }
     
     html {
@@ -33,7 +42,9 @@
     }
     
     ul li a:hover {
-        background-color: #261f2c65;
+        background-color: #7b4559;
+        padding: 5px;
+        border-radius: 10px;
     }
     
     ul li a img{

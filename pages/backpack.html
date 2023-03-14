@@ -69,9 +69,21 @@
     </header>
 
     <main class="container-fluid">
-        <h1>Mochila</h1>
+        <div class="my-2" id="cart-items">
+            
+        </div>
+        <div class="my-2 d-flex flex-row justify-content-between align-items-center">
+            <h4>Total:</h4>
+            <h4 id="cart-total"></h4>
+        </div>
+        <div class=" my-4 d-flex justify-content-center align-items-center">
+            <button class="px-2 py-2 main-btn twhite">Terminar Compra</button>
+        </div>
+        
     </main>
     
+    
+
     <!-- Aqui comienza el footer -->
     <footer class="container-fluid">
         <div class="row pt-2 d-flex flex-row flex-lg-row-reverse flex-wrap justify-content-evenly align-items-center">
@@ -117,6 +129,7 @@
     </footer>
     <!-- Aqui termina el footer -->
 
+    <script src="../js/backpack.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script> AOS.init(); </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
