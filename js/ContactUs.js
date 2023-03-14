@@ -1,8 +1,3 @@
-const  formulario = document.querySelector('#formulario');
-
-const  maileador = document.querySelector('#maileador');
-
-
 formulario.addEventListener('submit', handleSumbit);
 
 const phone = document.getElementById('telefono');
@@ -23,7 +18,6 @@ const btnsubmit = document.getElementById('btn-enviar');
 // Enviar como correo la informacion
 
 const  formulario = document.querySelector('#formulario');
-
 const  maileador = document.querySelector('#maileador');
 
 
