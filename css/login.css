@@ -1,0 +1,33 @@
+body{
+    font-family: 'Montserrat';
+}
+
+.section-style{
+    background-color: #ffffff;
+}
+.card-style{
+    border: 1rem  #F6D155;
+}
+.img-style{
+    border-radius: 1rem 0 0 1rem;
+}
+.contianer-sesion{
+    margin-bottom: 30px;
+}
+.btn-style{
+    background-color: #C98474;
+    text-color: #f2d388;
+}
+.btn-style:hover{
+    background-color: #7b4559;
+}
+h5{
+    letter-spacing: 1px;
+}
+p{
+    color: #874C62;
+}
+a{
+    color: #75787d;
+    text-decoration:;
+}
