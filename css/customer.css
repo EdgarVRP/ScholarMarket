@@ -1,0 +1,41 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+#tittle-MiCuenta, #tittle-DatosUsuario, #tittle-HistorialCompras{
+    text-align: center;
+}
+
+#divisorG{
+    width: 1450px;
+    height: 30px;
+    
+}
+.divisor{
+    text-align: center;
+}
+#divisorDU{
+    width: 450px;
+    height: 20px;
+}
+#divisorHC{
+    width: 1000px;
+    height: 20px;
+}
+.col-4{
+    	
+display: flex;
+justify-content: center;
+}
+.iconos{
+    max-width: 50px;
+}
+#iconoEditar{
+    max-width: 20px;
+}
+.inputd:not([readonly]) {
+    border: 2px solid #874c62;
+    background-color: #fff;
+  }
+
+
+  
