@@ -8,12 +8,12 @@ a{
     list-style: none;
   }
 
-
-.containaer-general{
-  border: 2px solid green;
-}
 .contianer-img{
-    margin-right: 150px;
+  margin-top: 165px;
+  margin-left: 40px;
+  margin-right: 40px;
+  /* grid-column-start: 5; 
+  grid-column-end: 2; */
 }
 .container-login{
     /* width: 100%; */
@@ -96,6 +96,9 @@ a{
     font-size: 20px;
     color: #F2D388;
 }
+::placeholder{
+  color: #fff;
+}
 .formulario .grupo-input{
     display: flex;
     /* width: 100%; */
@@ -132,7 +135,7 @@ a{
     padding: 14px;
     border:none;
     background: #C98474;
-    color: #874C62;
+    color: #fff;
     font-size: 14px;
     text-transform: uppercase;
     border-radius: 4px;
@@ -140,15 +143,17 @@ a{
     outline: 0;
     cursor: pointer;
     display: block;
+    font-weight: 400;
 }
 .formulario .btn:hover{
     background: #874C62;
-    color: #F2D388
+    color: #fff;
+    
 }
 /*---------Estilos mensajes de erros------*/
 /*---------Estilos mensajes de erros------*/
 .error-text{
-    background: red;
+    //border: 2px solid red;
     border-radius: 4px;
     padding:8px 20px;
     margin-bottom: 10px;
