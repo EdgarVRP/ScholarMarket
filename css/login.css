@@ -1,33 +1,236 @@
 body{
     font-family: 'Montserrat';
 }
+a{
+    text-decoration: none;
+  }
+  ul,ol{
+    list-style: none;
+  }
 
-.section-style{
-    background-color: #ffffff;
+.contianer-img{
+  margin-top: 165px;
+  margin-left: 40px;
+  margin-right: 40px;
+  /* grid-column-start: 5; 
+  grid-column-end: 2; */
 }
-.card-style{
-    border: 1rem  #F6D155;
+.container-login{
+    /* width: 100%; */
+    height: auto;
+    display: flex;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    overflow: hidden;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    //margin-left: 60px;
 }
-.img-style{
-    border-radius: 1rem 0 0 1rem;
+.container-form{
+     width:100%;
+    padding: 100px 50px 50px 50px; 
 }
-.contianer-sesion{
-    margin-bottom: 30px;
-}
-.btn-style{
-    background-color: #C98474;
-    text-color: #f2d388;
-}
-.btn-style:hover{
-    background-color: #7b4559;
-}
-h5{
-    letter-spacing: 1px;
-}
-p{
+
+.container-form .title{
+    font-size: 30px;
+    font-weight: 600;
+    //margin-bottom: 20px
     color: #874C62;
 }
-a{
-    color: #75787d;
-    text-decoration:;
+.container-tittle{
+    display: flex;
+    justify-content: center;
 }
+.description{
+    font-size: 20px;
+    color: #C98474;
+}
+
+/* ------------- ESTILOS TAB ------------------- */
+
+.tabs-link{
+    margin-top: 70px;
+    display: flex;
+    /* width: 100%; */
+    border-bottom: 2px solid #F2D388;
+    padding-bottom: 10px;
+}
+.tab-link{
+    font-size: 20px;
+    margin-right: 30px;
+    color: #C98474;
+    cursor: pointer;
+    position: relative;
+}
+.tab-link.active{
+    color: #874C62;
+    font-weight: 700;
+}
+.tabs-link .tab-link.active::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: #F2D388;
+    left: 0;
+    bottom: -10px;
+}
+
+
+/*------- ESTILO DE FORMULARIO -------------*/
+.formulario{
+    display: ;
+    margin-top: 30px;
+}
+.formulario .active{
+    display: block;
+}
+.formulario .input-text{
+    padding: 14px 20px;
+    border: 1px solid transparent;
+    background: #C98474;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    width: 100%;
+    outline: 0;
+    font-size: 20px;
+    color: #F2D388;
+}
+::placeholder{
+  color: #fff;
+}
+.formulario .grupo-input{
+    display: flex;
+    /* width: 100%; */
+    position: relative;
+    margin-top: 20px;
+}
+.formulario .grupo-input .icono{
+    position: absolute;
+    width: 40px;
+    height: 80%;
+    border: none;
+    cursor: pointer;
+    background: none;
+    font-size: 20px;
+    color: #874C62;
+    right: 0;
+    outline: 0;
+}
+.formulario .grupo-input .icono.active{
+    color: #874C62;
+  }
+.formulario .input-text:focus{
+    border: 1px solid #874C62;
+}
+.link{
+    //font-size: 18px;
+    color: #874C62;
+}
+.link:hover{
+    text-decoration: underline;
+}
+.btn{
+    width: 100%;
+    padding: 14px;
+    border:none;
+    background: #C98474;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-top: 30px;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    font-weight: 400;
+}
+.formulario .btn:hover{
+    background: #874C62;
+    color: #fff;
+    
+}
+/*---------Estilos mensajes de erros------*/
+/*---------Estilos mensajes de erros------*/
+.error-text{
+    //border: 2px solid red;
+    border-radius: 4px;
+    padding:8px 20px;
+    margin-bottom: 10px;
+    display: none;
+  }
+  
+  .error-text.active{
+    display: block;
+  }
+  .error-text p{
+    font-size: 23px;
+    color: red;
+  }
+  
+  .cbx-error .cbx-marca{
+    -webkit-animation: cbx_error .2s ease-in-out infinite;
+    animation: cbx_error 0.2s ease-in-out infinite;
+    border: 1px solid var(--color-rojo);
+  }
+  
+/*---------------ESTILOS DEL CHECKBOX----------*/
+.container-cbx{
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    cursor:pointer;
+    font-size: 14px;
+    color: #874C62;
+    user-select: none;
+  }
+  
+  .container-cbx input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  .container-cbx .cbx-marca{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    border: 1px solid #874C62;
+    border-radius: 2px;
+    transition: all 0.8s ease;
+  }
+  
+  .container-cbx:hover input ~ .cbx-marca{
+    border: 1px solid ;
+  }
+  .container-cbx .cbx-marca::after{
+    font-family: "Quicksand-VariableFont_wght";
+    font-weight: 900;
+    content: '\f00c';
+    font-size: 14px;
+    position: absolute;
+    display: none;
+    left: 3px;
+    top: 3px;
+    color:#fff
+  }
+  
+  .container-cbx input:checked ~ .cbx-marca::after{
+    display: block;
+  }
+  .container-cbx input:checked ~ .cbx-marca{
+    background: #874C62 !important;
+    border: 1px solid #874C62!important;
+  }
+  
+  /*------ Animacion de los checkbox----*/
+  .container-cbx.animate input:checked ~ .cbx-marca{
+    -webkit-transform: rotate(360deg);
+    transform:rotate(360deg);
+  }
+  
