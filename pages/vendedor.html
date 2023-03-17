@@ -143,9 +143,11 @@
                     <th scope="col">Nombre</th>
                     <th scope="col">Imagen</th>
                     <th scope="col">Descripcion</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Lugar de venta</th>
                     <th scope="col">Compradores</th>
                     <th scope="col">Ventas totales</th>
-                    <th scope="col">Precio</th>
                     <th scope="col">Editar</th>
                     <th scope="col">Eliminar</th>
                   </tr>
@@ -335,7 +337,7 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="nombreProducto"
+                    id="editarNombreProducto"
                     placeholder="Nombre del producto"
                     required
                   />
@@ -344,7 +346,7 @@
                   >
                   <textarea
                     class="form-control"
-                    id="descripcionProducto"
+                    id="editarDescripcionProducto"
                     rows="3"
                     required
                   ></textarea>
@@ -352,7 +354,7 @@
                   <input
                     type="number"
                     class="form-control"
-                    id="precioProducto"
+                    id="editarPrecioProducto"
                     placeholder="Precio del producto"
                     required
                   />
@@ -360,13 +362,13 @@
                   <select
                     class="form-select"
                     aria-label="Default select example"
-                    id="CategoriaProducto"
+                    id="editarCategoriaProducto"
                     required
                   >
                     <option selected>Selecciona una categoria</option>
-                    <option value="1">Categoria 1</option>
-                    <option value="2">Categoria 2</option>
-                    <option value="3">Categoria 3</option>
+                    <option value="1">libros</option>
+                    <option value="2">electronica</option>
+                    <option value="3">general</option>
                   </select>
                   <label for="lugarVentaProducto"
                     >Lugar de venta del producto</label
@@ -374,7 +376,7 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="lugarVentaProducto"
+                    id="editarLugarVentaProducto"
                     placeholder="Lugar de venta del producto"
                     required
                   />
