@@ -1,111 +1,545 @@
 [
-   {
-      "idUsuario":1,
-      "idVendedor":1,
-      "idProducto":1,
-      "nombre":"Producto 1",
-      "rutaImagen":"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nisl nisl aliquet mauris, eget aliquam nisl nunc",
-"precio":85,
-"categoria":"libros",
-"lugarVenta":"UNAM",
-"ventasCompletas":10,
-      "compradores":[
-         {
-            "idComprador":1,
-            "idUsuario":1,
-            "nombre":"Comprador 1"
-         },
-         {
-            "idComprador":2,
-            "idUsuario":2,
-            "nombre":"Comprador 2"
-         },
-         {
-            "idComprador":3,
-            "idUsuario":3,
-            "nombre":"Comprador 3"
-         }
-      ],
-"venta":[
-         {
-      "idVendedor":1,
-      "idProducto":1,
-            "idComprador":1,
-            "nombreComprador":"Comprador 1",
-            "idVenta":1,
-            "mensajeAlComprador":"Mensaje del vendedor 1",
-            "mensajeAlVendedor":"Mensaje del comprador 1",
-            "rutaComprobante":"ruta",
-            "fechaPago":"2021-05-05",
-            "fechaEntrega":"2021-05-05"
-         },
-         {
-      "idVendedor":2,
-      "idProducto":2,
-            "idComprador":2,
-            "nombreComprador":"Comprador 2",
-            "idVenta":2,
-            "mensajeAlComprador":"Mensaje del vendedor 2",
-            "mensajeAlVendedor":"Mensaje del comprador 2",
-            "rutaComprobante":"ruta",
-            "fechaPago":"2021-05-05",
-            "fechaEntrega":"2021-05-05"
-         }
-      ]
-   },
-   {
-      "idUsuario":2,
-      "idVendedor":2,
-      "idProducto":2,
-      "nombre":"Producto 2",
-      "rutaImagen":"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nisl nisl aliquet mauris, eget aliquam nisl nunc",
-"precio":95,
-"categoria":"libros",
-"lugarVenta":"UNAM",
-"ventasCompletas":20,
-      "compradores":[
-         {
-            "idComprador":1,
-            "idUsuario":1,
-            "nombre":"Comprador 1"
-         },
-         {
-            "idComprador":2,
-            "idUsuario":2,
-            "nombre":"Comprador 2"
-         },
-         {
-            "idComprador":3,
-            "idUsuario":3,
-            "nombre":"Comprador 3"
-         }],
-"venta":[
-         {
-      "idVendedor":1,
-      "idProducto":1,
-            "idComprador":1,
-            "nombreComprador":"Comprador 1",
-            "idVenta":1,
-            "mensajeAlVendedor":"Mensaje del vendedor 1",
-            "mensajeAlComprador":"Mensaje del comprador 1",
-            "rutaComprobante":"ruta",
-            "fechaPago":"2021-05-05",
-            "fechaEntrega":"2021-05-05"
-         },
-         {
-      "idVendedor":2,
-      "idProducto":2,
-            "idComprador":2,
-            "nombreComprador":"Comprador 2",
-            "idVenta":2,
-            "mensajeAlComprador":"Mensaje del vendedor 2",
-            "mensajeAlVendedor":"Mensaje del comprador 2",
-            "rutaComprobante":"ruta",
-            "fechaPago":"2021-05-05",
-            "fechaEntrega":"2021-05-05"
-         }
-      ]
-   }
+  {
+    "idUsuario": 1,
+    "idVendedor": 1,
+    "idProducto": 1,
+    "nombre": "Producto 1",
+    "rutaImagen": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nisl nisl aliquet mauris, eget aliquam nisl nunc",
+    "precio": 85,
+    "categoria": "libros",
+    "lugarVenta": "UNAM",
+    "ventasCompletas": 10,
+    "compradores": [
+      {
+        "idComprador": 1,
+        "idUsuario": 1,
+        "nombre": "Comprador 1"
+      },
+      {
+        "idComprador": 2,
+        "idUsuario": 2,
+        "nombre": "Comprador 2"
+      },
+      {
+        "idComprador": 3,
+        "idUsuario": 3,
+        "nombre": "Comprador 3"
+      }
+    ],
+    "venta": [
+      {
+        "idVendedor": 1,
+        "idProducto": 1,
+        "idComprador": 1,
+        "nombreComprador": "Comprador 1",
+        "idVenta": 1,
+        "mensajeAlComprador": "Mensaje del vendedor 1",
+        "mensajeAlVendedor": "Mensaje del comprador 1",
+        "rutaComprobante": "ruta",
+        "fechaPago": "2021-05-05",
+        "fechaEntrega": "2021-05-05"
+      },
+      {
+        "idVendedor": 2,
+        "idProducto": 2,
+        "idComprador": 2,
+        "nombreComprador": "Comprador 2",
+        "idVenta": 2,
+        "mensajeAlComprador": "Mensaje del vendedor 2",
+        "mensajeAlVendedor": "Mensaje del comprador 2",
+        "rutaComprobante": "ruta",
+        "fechaPago": "2021-05-05",
+        "fechaEntrega": "2021-05-05"
+      }
+    ]
+  },
+  {
+    "idUsuario": 2,
+    "idVendedor": 2,
+    "idProducto": 2,
+    "nombre": "Producto 2",
+    "rutaImagen": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nisl nisl aliquet mauris, eget aliquam nisl nunc",
+    "precio": 95,
+    "categoria": "libros",
+    "lugarVenta": "UNAM",
+    "ventasCompletas": 20,
+    "compradores": [
+      {
+        "idComprador": 1,
+        "idUsuario": 1,
+        "nombre": "Comprador 1"
+      },
+      {
+        "idComprador": 2,
+        "idUsuario": 2,
+        "nombre": "Comprador 2"
+      },
+      {
+        "idComprador": 3,
+        "idUsuario": 3,
+        "nombre": "Comprador 3"
+      }
+    ],
+    "venta": [
+      {
+        "idVendedor": 1,
+        "idProducto": 1,
+        "idComprador": 1,
+        "nombreComprador": "Comprador 1",
+        "idVenta": 1,
+        "mensajeAlVendedor": "Mensaje del vendedor 1",
+        "mensajeAlComprador": "Mensaje del comprador 1",
+        "rutaComprobante": "ruta",
+        "fechaPago": "2021-05-05",
+        "fechaEntrega": "2021-05-05"
+      },
+      {
+        "idVendedor": 2,
+        "idProducto": 2,
+        "idComprador": 2,
+        "nombreComprador": "Comprador 2",
+        "idVenta": 2,
+        "mensajeAlComprador": "Mensaje del vendedor 2",
+        "mensajeAlVendedor": "Mensaje del comprador 2",
+        "rutaComprobante": "ruta",
+        "fechaPago": "2021-05-05",
+        "fechaEntrega": "2021-05-05"
+      }
+    ]
+  },
+  {
+    "idUsuario": 3,
+    "idVendedor": 3,
+    "idProducto": 3,
+    "nombre": "Producto 3",
+    "rutaImagen": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nisl nisl aliquet mauris, eget aliquam nisl nunc",
+    "precio": 95,
+    "categoria": "libros",
+    "lugarVenta": "UNAM",
+    "ventasCompletas": 3,
+    "compradores": [
+      {
+        "idComprador": 1,
+        "idUsuario": 1,
+        "nombre": "Comprador 1"
+      },
+      {
+        "idComprador": 2,
+        "idUsuario": 2,
+        "nombre": "Comprador 2"
+      },
+      {
+        "idComprador": 3,
+        "idUsuario": 3,
+        "nombre": "Comprador 3"
+      }
+    ],
+    "venta": [
+      {
+        "idVendedor": 1,
+        "idProducto": 1,
+        "idComprador": 1,
+        "nombreComprador": "Comprador 1",
+        "idVenta": 1,
+        "mensajeAlVendedor": "Mensaje del vendedor 1",
+        "mensajeAlComprador": "Mensaje del comprador 1",
+        "rutaComprobante": "ruta",
+        "fechaPago": "2021-05-05",
+        "fechaEntrega": "2021-05-05"
+      },
+      {
+        "idVendedor": 4,
+        "idProducto": 4,
+        "idComprador": 4,
+        "nombreComprador": "Comprador 2",
+        "idVenta": 2,
+        "mensajeAlComprador": "Mensaje del vendedor 2",
+        "mensajeAlVendedor": "Mensaje del comprador 2",
+        "rutaComprobante": "ruta",
+        "fechaPago": "2021-05-05",
+        "fechaEntrega": "2021-05-05"
+      }
+    ]
+  },{
+   "idUsuario": 4,
+   "idVendedor": 4,
+   "idProducto": 4,
+   "nombre": "Producto 4",
+   "rutaImagen": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+   "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nisl nisl aliquet mauris, eget aliquam nisl nunc",
+   "precio": 95,
+   "categoria": "libros",
+   "lugarVenta": "UNAM",
+   "ventasCompletas": 4,
+   "compradores": [
+     {
+       "idComprador": 1,
+       "idUsuario": 1,
+       "nombre": "Comprador 1"
+     },
+     {
+       "idComprador": 2,
+       "idUsuario": 2,
+       "nombre": "Comprador 2"
+     },
+     {
+       "idComprador": 3,
+       "idUsuario": 3,
+       "nombre": "Comprador 3"
+     }
+   ],
+   "venta": [
+     {
+       "idVendedor": 1,
+       "idProducto": 1,
+       "idComprador": 1,
+       "nombreComprador": "Comprador 1",
+       "idVenta": 1,
+       "mensajeAlVendedor": "Mensaje del vendedor 1",
+       "mensajeAlComprador": "Mensaje del comprador 1",
+       "rutaComprobante": "ruta",
+       "fechaPago": "2021-05-05",
+       "fechaEntrega": "2021-05-05"
+     },
+     {
+       "idVendedor": 2,
+       "idProducto": 2,
+       "idComprador": 2,
+       "nombreComprador": "Comprador 2",
+       "idVenta": 2,
+       "mensajeAlComprador": "Mensaje del vendedor 2",
+       "mensajeAlVendedor": "Mensaje del comprador 2",
+       "rutaComprobante": "ruta",
+       "fechaPago": "2021-05-05",
+       "fechaEntrega": "2021-05-05"
+     }
+   ]
+ },{
+   "idUsuario": 5,
+   "idVendedor": 5,
+   "idProducto": 5,
+   "nombre": "Producto 5",
+   "rutaImagen": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+   "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nisl nisl aliquet mauris, eget aliquam nisl nunc",
+   "precio": 95,
+   "categoria": "libros",
+   "lugarVenta": "UNAM",
+   "ventasCompletas": 3,
+   "compradores": [
+     {
+       "idComprador": 1,
+       "idUsuario": 1,
+       "nombre": "Comprador 1"
+     },
+     {
+       "idComprador": 2,
+       "idUsuario": 2,
+       "nombre": "Comprador 2"
+     },
+     {
+       "idComprador": 3,
+       "idUsuario": 3,
+       "nombre": "Comprador 3"
+     }
+   ],
+   "venta": [
+     {
+       "idVendedor": 1,
+       "idProducto": 1,
+       "idComprador": 1,
+       "nombreComprador": "Comprador 1",
+       "idVenta": 1,
+       "mensajeAlVendedor": "Mensaje del vendedor 1",
+       "mensajeAlComprador": "Mensaje del comprador 1",
+       "rutaComprobante": "ruta",
+       "fechaPago": "2021-05-05",
+       "fechaEntrega": "2021-05-05"
+     },
+     {
+       "idVendedor": 2,
+       "idProducto": 2,
+       "idComprador": 2,
+       "nombreComprador": "Comprador 2",
+       "idVenta": 2,
+       "mensajeAlComprador": "Mensaje del vendedor 2",
+       "mensajeAlVendedor": "Mensaje del comprador 2",
+       "rutaComprobante": "ruta",
+       "fechaPago": "2021-05-05",
+       "fechaEntrega": "2021-05-05"
+     }
+   ]
+ },{
+   "idUsuario": 6,
+   "idVendedor": 6,
+   "idProducto": 6,
+   "nombre": "Producto 6",
+   "rutaImagen": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+   "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nisl nisl aliquet mauris, eget aliquam nisl nunc",
+   "precio": 95,
+   "categoria": "libros",
+   "lugarVenta": "UNAM",
+   "ventasCompletas": 6,
+   "compradores": [
+     {
+       "idComprador": 1,
+       "idUsuario": 1,
+       "nombre": "Comprador 1"
+     },
+     {
+       "idComprador": 2,
+       "idUsuario": 2,
+       "nombre": "Comprador 2"
+     },
+     {
+       "idComprador": 3,
+       "idUsuario": 3,
+       "nombre": "Comprador 3"
+     }
+   ],
+   "venta": [
+     {
+       "idVendedor": 1,
+       "idProducto": 1,
+       "idComprador": 1,
+       "nombreComprador": "Comprador 1",
+       "idVenta": 1,
+       "mensajeAlVendedor": "Mensaje del vendedor 1",
+       "mensajeAlComprador": "Mensaje del comprador 1",
+       "rutaComprobante": "ruta",
+       "fechaPago": "2021-05-05",
+       "fechaEntrega": "2021-05-05"
+     },
+     {
+       "idVendedor": 2,
+       "idProducto": 2,
+       "idComprador": 2,
+       "nombreComprador": "Comprador 2",
+       "idVenta": 2,
+       "mensajeAlComprador": "Mensaje del vendedor 2",
+       "mensajeAlVendedor": "Mensaje del comprador 2",
+       "rutaComprobante": "ruta",
+       "fechaPago": "2021-05-05",
+       "fechaEntrega": "2021-05-05"
+     }
+   ]
+ },{
+   "idUsuario": 7,
+   "idVendedor": 7,
+   "idProducto": 7,
+   "nombre": "Producto 7",
+   "rutaImagen": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+   "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nisl nisl aliquet mauris, eget aliquam nisl nunc",
+   "precio": 95,
+   "categoria": "libros",
+   "lugarVenta": "UNAM",
+   "ventasCompletas": 7,
+   "compradores": [
+     {
+       "idComprador": 1,
+       "idUsuario": 1,
+       "nombre": "Comprador 1"
+     },
+     {
+       "idComprador": 2,
+       "idUsuario": 2,
+       "nombre": "Comprador 2"
+     },
+     {
+       "idComprador": 3,
+       "idUsuario": 3,
+       "nombre": "Comprador 3"
+     }
+   ],
+   "venta": [
+     {
+       "idVendedor": 1,
+       "idProducto": 1,
+       "idComprador": 1,
+       "nombreComprador": "Comprador 1",
+       "idVenta": 1,
+       "mensajeAlVendedor": "Mensaje del vendedor 1",
+       "mensajeAlComprador": "Mensaje del comprador 1",
+       "rutaComprobante": "ruta",
+       "fechaPago": "2021-05-05",
+       "fechaEntrega": "2021-05-05"
+     },
+     {
+       "idVendedor": 2,
+       "idProducto": 2,
+       "idComprador": 2,
+       "nombreComprador": "Comprador 2",
+       "idVenta": 2,
+       "mensajeAlComprador": "Mensaje del vendedor 2",
+       "mensajeAlVendedor": "Mensaje del comprador 2",
+       "rutaComprobante": "ruta",
+       "fechaPago": "2021-05-05",
+       "fechaEntrega": "2021-05-05"
+     }
+   ]
+ },{
+   "idUsuario": 8,
+   "idVendedor": 8,
+   "idProducto": 8,
+   "nombre": "Producto 8",
+   "rutaImagen": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+   "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nisl nisl aliquet mauris, eget aliquam nisl nunc",
+   "precio": 95,
+   "categoria": "libros",
+   "lugarVenta": "UNAM",
+   "ventasCompletas": 8,
+   "compradores": [
+     {
+       "idComprador": 1,
+       "idUsuario": 1,
+       "nombre": "Comprador 1"
+     },
+     {
+       "idComprador": 2,
+       "idUsuario": 2,
+       "nombre": "Comprador 2"
+     },
+     {
+       "idComprador": 3,
+       "idUsuario": 3,
+       "nombre": "Comprador 3"
+     }
+   ],
+   "venta": [
+     {
+       "idVendedor": 1,
+       "idProducto": 1,
+       "idComprador": 1,
+       "nombreComprador": "Comprador 1",
+       "idVenta": 1,
+       "mensajeAlVendedor": "Mensaje del vendedor 1",
+       "mensajeAlComprador": "Mensaje del comprador 1",
+       "rutaComprobante": "ruta",
+       "fechaPago": "2021-05-05",
+       "fechaEntrega": "2021-05-05"
+     },
+     {
+       "idVendedor": 2,
+       "idProducto": 2,
+       "idComprador": 2,
+       "nombreComprador": "Comprador 2",
+       "idVenta": 2,
+       "mensajeAlComprador": "Mensaje del vendedor 2",
+       "mensajeAlVendedor": "Mensaje del comprador 2",
+       "rutaComprobante": "ruta",
+       "fechaPago": "2021-05-05",
+       "fechaEntrega": "2021-05-05"
+     }
+   ]
+ },{
+   "idUsuario": 9,
+   "idVendedor": 9,
+   "idProducto": 9,
+   "nombre": "Producto 9",
+   "rutaImagen": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+   "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nisl nisl aliquet mauris, eget aliquam nisl nunc",
+   "precio": 95,
+   "categoria": "libros",
+   "lugarVenta": "UNAM",
+   "ventasCompletas": 9,
+   "compradores": [
+     {
+       "idComprador": 1,
+       "idUsuario": 1,
+       "nombre": "Comprador 1"
+     },
+     {
+       "idComprador": 2,
+       "idUsuario": 2,
+       "nombre": "Comprador 2"
+     },
+     {
+       "idComprador": 3,
+       "idUsuario": 3,
+       "nombre": "Comprador 3"
+     }
+   ],
+   "venta": [
+     {
+       "idVendedor": 1,
+       "idProducto": 1,
+       "idComprador": 1,
+       "nombreComprador": "Comprador 1",
+       "idVenta": 1,
+       "mensajeAlVendedor": "Mensaje del vendedor 1",
+       "mensajeAlComprador": "Mensaje del comprador 1",
+       "rutaComprobante": "ruta",
+       "fechaPago": "2021-05-05",
+       "fechaEntrega": "2021-05-05"
+     },
+     {
+       "idVendedor": 2,
+       "idProducto": 2,
+       "idComprador": 2,
+       "nombreComprador": "Comprador 2",
+       "idVenta": 2,
+       "mensajeAlComprador": "Mensaje del vendedor 2",
+       "mensajeAlVendedor": "Mensaje del comprador 2",
+       "rutaComprobante": "ruta",
+       "fechaPago": "2021-05-05",
+       "fechaEntrega": "2021-05-05"
+     }
+   ]
+ },{
+   "idUsuario": 10,
+   "idVendedor": 10,
+   "idProducto": 10,
+   "nombre": "Producto 10",
+   "rutaImagen": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+   "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nisl nisl aliquet mauris, eget aliquam nisl nunc",
+   "precio": 95,
+   "categoria": "libros",
+   "lugarVenta": "UNAM",
+   "ventasCompletas": 3,
+   "compradores": [
+     {
+       "idComprador": 1,
+       "idUsuario": 1,
+       "nombre": "Comprador 1"
+     },
+     {
+       "idComprador": 2,
+       "idUsuario": 2,
+       "nombre": "Comprador 2"
+     },
+     {
+       "idComprador": 3,
+       "idUsuario": 3,
+       "nombre": "Comprador 3"
+     }
+   ],
+   "venta": [
+     {
+       "idVendedor": 1,
+       "idProducto": 1,
+       "idComprador": 1,
+       "nombreComprador": "Comprador 1",
+       "idVenta": 1,
+       "mensajeAlVendedor": "Mensaje del vendedor 1",
+       "mensajeAlComprador": "Mensaje del comprador 1",
+       "rutaComprobante": "ruta",
+       "fechaPago": "2021-05-05",
+       "fechaEntrega": "2021-05-05"
+     },
+     {
+       "idVendedor": 2,
+       "idProducto": 2,
+       "idComprador": 2,
+       "nombreComprador": "Comprador 2",
+       "idVenta": 2,
+       "mensajeAlComprador": "Mensaje del vendedor 2",
+       "mensajeAlVendedor": "Mensaje del comprador 2",
+       "rutaComprobante": "ruta",
+       "fechaPago": "2021-05-05",
+       "fechaEntrega": "2021-05-05"
+     }
+   ]
+ }
 ]
