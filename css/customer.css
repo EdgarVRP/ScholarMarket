@@ -1,41 +1,79 @@
-body{
-    font-family: 'Montserrat', sans-serif;
-}
-#tittle-MiCuenta, #tittle-DatosUsuario, #tittle-HistorialCompras{
-    text-align: center;
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  align-items: center;
 }
 
-#divisorG{
-    width: 1450px;
-    height: 30px;
-    
+#tittle-MiCuenta,
+#tittle-DatosUsuario,
+#tittle-HistorialCompras {
+  text-align: center;
 }
-.divisor{
-    text-align: center;
+
+#divisorG {
+  width: 1450px;
+  height: 30px;
+
 }
-#divisorDU{
-    width: 450px;
-    height: 20px;
+
+.divisor {
+  text-align: center;
 }
-#divisorHC{
-    width: 1000px;
-    height: 20px;
+
+#divisorDU {
+  width: 450px;
+  height: 20px;
 }
-.col-4{
+
+#divisorHC {
+  width: 1000px;
+  height: 20px;
+}
+
+/* .col-4{
     	
 display: flex;
 justify-content: center;
+} */
+.iconos {
+  max-width: 50px;
 }
-.iconos{
-    max-width: 50px;
-}
-#iconoEditar{
-    max-width: 20px;
-}
-.inputd:not([readonly]) {
-    border: 2px solid #874c62;
-    background-color: #fff;
-  }
 
+#iconoEditar {
+  max-width: 20px;
+}
 
-  
+.inputd:not([readonly]),
+select:not([disabled]) {
+  border: 2px solid #89c9ca;
+  background-color: #fff;
+}
+
+#container-DatosUsuario,
+#container-usuario {
+  align-items: center;
+  text-align: center;
+}
+
+.ocultar-imagen {
+  display: none;
+}
+.btn{
+  background-color: #874c62;
+  border-color: #a68bd1;
+  color: #fff; 
+  border-width: 3px;
+  font-family: 'Righteous';
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease-in-out;
+}
+.btn:hover{
+  background-color: #874c62;
+  border-color: #89c9ca;
+  color: #fff; 
+}
+.btn:active {
+  background-color: #a2457f;
+  border-color: #874c62;
+  color: #fff; /* opcional, si se desea cambiar el color del texto al mantener presionado */
+}

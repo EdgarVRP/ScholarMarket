@@ -9,7 +9,7 @@ a{
 .container-mv{
     margin-top: 100px;
     background-color: #874c62;
-    width-max: 900px:
+    max-width: 900px;
 }
 .container-about-us{
     padding: 25px;

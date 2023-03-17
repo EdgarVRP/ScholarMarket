@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "nombre": "Producto 1",
+      "imagen": "../assets/img/producto1.jpg",
+      "descripcion": "Descripción del Producto 1",
+      "vendedor": "Vendedor 1"
+    },
+    {
+      "id": 2,
+      "nombre": "Producto 2",
+      "imagen": "../assets/img/producto2.jpg",
+      "descripcion": "Descripción del Producto 2",
+      "vendedor": "Vendedor 2"
+    },
+    {
+      "id": 3,
+      "nombre": "Producto 3",
+      "imagen": "../assets/img/producto3.jpg",
+      "descripcion": "Descripción del Producto 3",
+      "vendedor": "Vendedor 1"
+    }
+  ]
+  
