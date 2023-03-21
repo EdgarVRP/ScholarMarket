@@ -1,8 +1,10 @@
 const btnEditarFormulario = document.getElementById('btn-editar-formulario');
 
 let valorOriginalNombre;
+let valorOriginalNombreC;
 
 let valorOriginalEmail;
+let valorOriginalTelefono;
 
 let valorOriginalUniversidad;
 
@@ -11,7 +13,9 @@ let valorOriginalUniversidad;
 btnEditarFormulario.addEventListener('click', (e) => {
   e.preventDefault();
   const inputNombre = document.getElementById('inputNombre');
+  const inputNombreC = document.getElementById('inputNombreC');
   const inputEmail = document.getElementById('inputEmail');
+  const inputTelefono = document.getElementById('inputTelefono');
   const selectUniversidad = document.getElementById('universidad');
   const inputContrasena = document.getElementById('inputContrasena');
   const btnEditarFormulario = document.getElementById('btn-editar-formulario');
@@ -24,9 +28,14 @@ btnEditarFormulario.addEventListener('click', (e) => {
     console.log(inputContrasena.value);
     valorOriginalNombre = inputNombre.value;
     inputNombre.readOnly = false;
+    valorOriginalNombreC = inputNombreC.value;
+    inputNombreC.readOnly = false;
 
     valorOriginalEmail = inputEmail.value;
     inputEmail.readOnly = false;
+
+    valorOriginalTelefono = inputTelefono.value;
+    inputTelefono.readOnly = false;
 
     // valorOriginalUniversidad = inputUniversidad.value;
     selectUniversidad.disabled = false;
@@ -48,9 +57,10 @@ btnEditarFormulario.addEventListener('click', (e) => {
   } else {
 
     inputNombre.readOnly = true;
+    inputNombreC.readOnly = true;
 
     inputEmail.readOnly = true;
-
+    inputTelefono.readOnly = true;
     // inputUniversidad.readOnly = true;
     selectUniversidad.disabled = true;
     console.log(inputContrasena.value);
