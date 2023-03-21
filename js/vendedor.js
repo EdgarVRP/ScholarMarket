@@ -36,12 +36,12 @@ productosLocalStorage = JSON.parse(localStorage.getItem('productos'));
 // Agregar cada producto a la tabla.
 productosLocalStorage.forEach(function(producto) {
   let fila = tabla.insertRow();
-  // Agregar la celda para el nombre del producto y con un id de nombreProducto.
+  // 0-Nombre del producto.
   fila.setAttribute("id", producto.nombre);
   fila.insertCell(0).innerHTML = producto.nombre;
   //a la celda se le agrega un id con el nombre del producto
   
-  // Agregar la celda para la imagen del producto.
+  // 1-Imagen del producto.
   let celdaImagen = fila.insertCell(1);
   let imagen = document.createElement("img");
   //imagen.src = "data:image/png;base64," + base64String;
@@ -49,11 +49,16 @@ productosLocalStorage.forEach(function(producto) {
   imagen.width = 100;
   celdaImagen.appendChild(imagen);
 
-  // Agregar la celda para la descripción del producto.
+  // 2-Descripcion del producto.
   fila.insertCell(2).innerHTML = producto.descripcion;
-
-  // Agregar la celda para el botón modal de los compradores.
-  let celdaModal = fila.insertCell(3);
+  // 3-Precio del producto.
+  fila.insertCell(3).innerHTML = producto.precio;
+  // 4-Categoria del producto.
+  fila.insertCell(4).innerHTML = producto.categoria;
+  // 5-Lugar de venta del producto.
+  fila.insertCell(5).innerHTML = producto.lugarVenta;
+  // 6-Modal compradores.
+  let celdaModal = fila.insertCell(6);
   let botonModal = document.createElement("button");
   botonModal.setAttribute("class", "btn btn-primary btnCompradores");
   botonModal.setAttribute("data-bs-toggle", "modal");
@@ -62,18 +67,19 @@ productosLocalStorage.forEach(function(producto) {
   botonModal.setAttribute("id", producto.idProducto);
   botonModal.innerHTML = "Ver compradores";
   celdaModal.appendChild(botonModal);
-  fila.insertCell(4).innerHTML = producto.ventasCompletas;
-  fila.insertCell(5).innerHTML = producto.precio;
-  //Modal editar producto
-  let celdaEditar = fila.insertCell(6);
+  // 7-ventas completas.
+  fila.insertCell(7).innerHTML = producto.ventasCompletas;
+  
+  // 8-Modal editar producto
+  let celdaEditar = fila.insertCell(8);
   let botonEditar = document.createElement("button");
   botonEditar.setAttribute("class", "btn btn-warning btnEditarProducto table-col-sm-12");
   botonEditar.setAttribute("data-bs-toggle", "modal");
   botonEditar.setAttribute("data-bs-target", "#modalEditarProducto");
   botonEditar.innerHTML = "Editar";
   celdaEditar.appendChild(botonEditar);
-  //Modal eliminar producto
-  let celdaEliminar = fila.insertCell(7);
+  // 9-Modal eliminar producto
+  let celdaEliminar = fila.insertCell(9);
   let botonEliminar = document.createElement("button");
   botonEliminar.setAttribute("class", "btn btn-danger");
   botonEliminar.setAttribute("data-bs-toggle", "modal");
@@ -141,11 +147,16 @@ on(document, "click", ".btnEditarProducto", (e) => {
   //Vaciando datos de la tabla en el modal
   //elemento abuelo de la celda
   let nombreProducto = e.target.parentNode.parentNode.childNodes[0].innerHTML;
-  console.log(nombreProducto);
   let descripcionProducto = e.target.parentNode.parentNode.childNodes[2].innerHTML;
-  console.log(descripcionProducto);
-  let ventasCompletas = e.target.parentNode.parentNode.childNodes[4].innerHTML;
-  console.log(ventasCompletas);
+  let precioProducto = e.target.parentNode.parentNode.childNodes[3].innerHTML;
+  let CategoriaProducto = e.target.parentNode.parentNode.childNodes[4].innerHTML;
+  let lugarVentaProducto = e.target.parentNode.parentNode.childNodes[5].innerHTML;
+  document.getElementById("editarNombreProducto").value = nombreProducto;
+  document.getElementById("editarDescripcionProducto").value = descripcionProducto;
+  document.getElementById("editarPrecioProducto").value = precioProducto;
+  document.getElementById("editarCategoriaProducto").value = CategoriaProducto;
+  document.getElementById("editarLugarVentaProducto").value = lugarVentaProducto;
+
 });
 
 //evento para añadir producto

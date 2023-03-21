@@ -24,7 +24,7 @@
             <div class="nav-grid align-items-center">
                 <a class="navbar-brand ms-2 ms-lg-5 nav-grid-logo d-flex align-items-center" href="#">
                     <img class="logo-nav d-none d-lg-block" src="./assets/img/whitelogo.png" alt="logo scholarmarket">
-                    <img class="logo-nav-sm d-md-block d-lg-none" src="assets/img/icono.png" alt="logo scholarmarket">
+                    <img class="logo-nav-sm d-md-block d-lg-none" src="./assets/img/icono.png" alt="logo scholarmarket">
                 </a>
                 <button class="navbar-toggler nav-grid-menu" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -69,6 +69,183 @@
     </header>
 
     <main class="container-fluid">
+        <!-- Carrusel escuelas -->
+
+        <div class="container-escuelas container-fluid">
+            <div class="d-flex align-items-center py-5 mh-100">
+                <a class="carousel-control-prev text-decoration-none " href="#homecarousel" role="button"
+                    data-bs-slide="prev">
+                    <div class="d-flex flex-column justify-content-center me-2 ms-auto left"><i
+                            class="fa-sharp fa-solid fa-circle-arrow-left"></i> </div>
+                </a>
+                <div class="container">
+                    <div id="homecarousel" class="carousel slide" data-bs-ride="carousel">
+                        <ol class="carousel-indicators indicators">
+                            <li data-bs-target="#homecarousel" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#homecarousel" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#homecarousel" data-bs-slide-to="2"></li>
+                            <li data-bs-target="#homecarousel" data-bs-slide-to="3"></li>
+                            <li data-bs-target="#homecarousel" data-bs-slide-to="4"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <img src="./assets/img/buap.png" class="img-escuela" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <img src="./assets/img/Esime.png" class="img-escuela"  alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <img src="./assets/img/UAM.png" class="img-escuela" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <img src="./assets/img/UAEM.png" class="img-escuela" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <img src="./assets/img/uvm.png" class="img-escuela" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-next text-decoration-none " href="#homecarousel" role="button"
+                    data-bs-slide="next">
+                    <div class="d-flex flex-column justify-content-center right ms-2 me-auto right"> <i
+                            class="fa-solid fa-circle-arrow-right"></i> </div>
+                </a>
+            </div>
+        </div>
+        <!-- Carrousel de Cartas -->
+
+        <div class="container-productos container-fluid my-4">
+            <div class="row justify-content-center">
+                <a class="carousel-control-prev text-decoration-none" href="#carouselProductos" role="button"
+                    data-bs-slide="prev">
+                    <div class="d-flex flex-column justify-content-center me-2 ms-auto left"><i
+                            class="fa-sharp fa-solid fa-circle-arrow-left"></i></div>
+                </a>
+                <div class="col-8 col-md-6 col-lg-6">
+                    <p class="articulos text-center" style="font-size: 2rem;">Productos Destacados</p>
+                    <div id="carouselProductos" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="card">
+                                            <img src="https://picsum.photos/500/300" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Producto 1</h5>
+                                                <p class="card-text">aquí iría la descripción del producto</p>
+                                                <p class="card-text">$250</p>
+                                                <a href="#" class="secondary-btn button-text">Comprar</a>
+                                                <br><br>
+                                                <a href="#" class="main-btn button-text">Agregar al carrito</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="card">
+                                            <img src="https://picsum.photos/500/300" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Producto 2</h5>
+                                                <p class="card-text">aquí iría la descripción del producto</p>
+                                                <p class="card-text">$350</p>
+                                                <a href="#" class="secondary-btn button-text">Comprar</a>
+                                                <br><br>
+                                                <a href="#" class="main-btn button-text">Agregar al carrito</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="card">
+                                            <img src="https://picsum.photos/500/300" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Producto 3</h5>
+                                                <p class="card-text">aquí iría la descripción del producto</p>
+                                                <p class="card-text">$500</p>
+                                                <a href="#" class="secondary-btn button-text">Comprar</a>
+                                                <br><br>
+                                                <a href="#" class="main-btn button-text">Agregar al carrito</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="card">
+                                            <img src="https://picsum.photos/500/300" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Producto 1</h5>
+                                                <p class="card-text">aquí iría la descripción del producto</p>
+                                                <p class="card-text">$250</p>
+                                                <a href="#" class="secondary-btn button-text">Comprar</a>
+                                                <br><br>
+                                                <a href="#" class="main-btn button-text">Agregar al carrito</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="card">
+                                            <img src="https://picsum.photos/500/300" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Producto 2</h5>
+                                                <p class="card-text">aquí iría la descripción del producto</p>
+                                                <p class="card-text">$350</p>
+                                                <a href="#" class="secondary-btn button-text">Comprar</a>
+                                                <br><br>
+                                                <a href="#" class="main-btn button-text">Agregar al carrito</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="card">
+                                            <img src="https://picsum.photos/500/300" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Producto 3</h5>
+                                                <p class="card-text">aquí iría la descripción del producto</p>
+                                                <p class="card-text">$500</p>
+                                                <a href="#" class="secondary-btn button-text">Comprar</a>
+                                                <br><br>
+                                                <a href="#" class="main-btn button-text">Agregar al carrito</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <a class="carousel-control-next text-decoration-none" href="#carouselProductos" role="button"
+                    data-bs-slide="next">
+                    <div class="d-flex flex-column justify-content-center ms-2 me-auto right"><i
+                            class="fa-sharp fa-solid fa-circle-arrow-right"></i></div>
+                </a>
+            </div>
+        </div>
+
 
     </main>
     
@@ -113,6 +290,9 @@
                         <img class="img-footer" src="./assets/img/logopay.png" alt="Logotipo PayPal">
                     </a>
             </div>
+            <a class="carousel-control-next text-decoration-none " href="#mycarousel" role="button" data-bs-slide="next">
+                <div class="d-flex flex-column justify-content-center right ms-2 me-auto"> <i class="fa-solid fa-circle-arrow-right"></i> </div>
+            </a>
         </div>
     </footer>
     <!-- Aqui termina el footer -->

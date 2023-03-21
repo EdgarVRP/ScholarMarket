@@ -60,11 +60,13 @@ function updateCart() {
             <div class="col-12 col-md-2 d-flex flex-row-reverse flex-md-column no-wrap align-items-center justify-content-between my-2">
                 <h4>$${item.price * item.quantity}</h4>
                 <div d-flex flex-row justify-content-center align-items-center no-wrap>
-                    <button class="less px-2 py-2 secondary-btn button-text" id=${item.id}>-</button>
+                    <button class="less px-2 py-2 secondary-btn " id=${item.id}>-</button>
                     <span class="m-2">${item.quantity}</span>
-                    <button class="more px-2 py-2 main-btn twhite button-text" id=${item.id + 1000}>+</button>
+                    <button class="more px-2 py-2 main-btn twhite " id=${item.id + 1000}>+</button>
                 </div>
-                <button class="delete px-2 py-2 main-btn twhite" id=${item.id + 2000}>delete</button>
+                <button class="delete px-2 py-2 alert-btn " id=${item.id + 2000}>
+                    <img class="img-thrash" src="../assets/img/botebasura.png">
+                </button>
             </div>
             <hr>
         `;
