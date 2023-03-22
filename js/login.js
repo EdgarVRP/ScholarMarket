@@ -174,7 +174,7 @@ if(document.getElementById('btnRegistro')){
             formRegistro.cbx_terminos.parentNode.classList.remove('cbx-error');            
         }
         //una vez hechas las verificaciones enviaremos el formulario para luego recibirlo con php
-        formRegistro.submit();
+        //formRegistro.submit();
         return true;
     });
 
