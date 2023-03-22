@@ -84,7 +84,11 @@ if(document.getElementById('btnRegistro')){
         nombre = formRegistro.nombre.value.trim();
         apellido = formRegistro.apellido.value.trim();
         password = formRegistro.password.value.trim();
+        password2 = formRegistro.password2.value.trim();
         correo = formRegistro.correo.value.trim();
+        telefono = formRegistro.telefono.value.trim();
+        //obtniendo el valor de la institucion a partir de un select
+        institucion = formRegistro.institucion.value;
         cbx_notify=formRegistro.cbx_notify;
         cbx_terminos=formRegistro.cbx_terminos;
 
@@ -174,8 +178,16 @@ if(document.getElementById('btnRegistro')){
             formRegistro.cbx_terminos.parentNode.classList.remove('cbx-error');            
         }
         //una vez hechas las verificaciones enviaremos el formulario para luego recibirlo con php
-        //formRegistro.submit();
-        return true;
+        //Se crea un objeto JSON
+        const datos = {};
+        datos.nombre = nombre;
+        datos.apellido = apellido;
+        datos.correo = correo;
+        datos.password = password;
+        datos.telefono = telefono;
+        datos.institucion = institucion;
+        console.log(datos);
+        
     });
 
     formRegistro.cbx_terminos.addEventListener('change',(e)=>{
