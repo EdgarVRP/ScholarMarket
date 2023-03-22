@@ -1,9 +1,14 @@
 .img-products{
-    width: 70%;
-    height: auto;
+    width: auto;
+    height: 150px;
 }
 
-
+.circle{
+    text-align: center;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
 
 .description{
     font-size: 18px;
@@ -13,10 +18,12 @@
     width: 40%;
     height: auto;
     padding: 0;
+    z-index: -1;
 }
 
 .delete{
     padding: 2px !important;
+    z-index: 999;
 }
 
 
@@ -40,8 +47,8 @@
         }
         
         .img-products{
-            width: 65%;
-            height: auto;
+            width: auto;
+            height: 140px;
         }
 
     }
@@ -52,8 +59,8 @@
     
         /* Estilos para dispositivos con ancho mínimo de 1080px y ancho máximo de 1400px */
         .img-products{
-            width: 55%;
-            height: auto;
+            width: auto;
+            height: 150px;
         }
         .img-thrash{
             width: 60%;
@@ -68,7 +75,7 @@
         }
         
         .img-products{
-            width: 45%;
-            height: auto;
+            width: auto;
+            height: 160px;
         }
     }
