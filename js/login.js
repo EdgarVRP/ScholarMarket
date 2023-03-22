@@ -84,7 +84,7 @@ if(document.getElementById('btnRegistro')){
         nombre = formRegistro.nombre.value.trim();
         apellido = formRegistro.apellido.value.trim();
         password = formRegistro.password.value.trim();
-
+        correo = formRegistro.correo.value.trim();
         cbx_notify=formRegistro.cbx_notify;
         cbx_terminos=formRegistro.cbx_terminos;
 
@@ -141,7 +141,7 @@ if(document.getElementById('btnRegistro')){
             return false;
         }else{
             if(!validarCorreo(correo)){
-                mostrarError('Por favor ingrese un correo valido',msError);
+                mostrarError('Por favor ingrese su correo escolar',msError);
                 inputError([formRegistro.correo]);
                 formRegistro.correo.focus();
                 return false;
@@ -174,7 +174,7 @@ if(document.getElementById('btnRegistro')){
             formRegistro.cbx_terminos.parentNode.classList.remove('cbx-error');            
         }
         //una vez hechas las verificaciones enviaremos el formulario para luego recibirlo con php
-        formRegistro.submit();
+        //formRegistro.submit();
         return true;
     });
 
@@ -255,12 +255,41 @@ function validarSoloLetras(valor){
 }
 
 /*-----------VALIDAR CORREO----------------*/
+/*expresion regular para validar correos electronicos que tengan el dominio de escuelas en mexico como:
+unam.mx (Universidad Nacional Autónoma de México)
+tec.mx (Instituto Tecnológico de Estudios Superiores de Monterrey)
+uam.mx (Universidad Autónoma Metropolitana)
+ipn.mx (Instituto Politécnico Nacional)
+udg.mx (Universidad de Guadalajara)
+uaemex.mx (Universidad Autónoma del Estado de México)
+uabc.mx (Universidad Autónoma de Baja California)
+uanl.mx (Universidad Autónoma de Nuevo León)
+uv.mx (Universidad Veracruzana)
+buap.mx (Benemérita Universidad Autónoma de Puebla)
+uaem.mx (Universidad Autónoma del Estado de Morelos)
+*/
+function validarCorreo(valor){
+    if(!/^[a-zA-Z0-9_.+-]+@(unam|tec|uam|ipn|udg|uaemex|uabc|uanl|uv|buap|uaem).mx$/.test(valor)){
+        return false;
+    }
+    return true;
+}
+/*
+function validarCorreo(valor){
+    if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(valor)){
+        return false;
+    }
+    return true;
+}
+*/
+/*
 function validarCorreo(valor){
     if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(valor)){
         return false;
     }
     return true;
 }
+*/
 
 /*-------------VALIDAR SOLO NUMEROS --------------*/
 function validarSoloNumeros(valor){
