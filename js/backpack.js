@@ -31,7 +31,7 @@ checkStorage();
 console.log(cartItems);
 
 // Esta linea de codigo se debe borrar cuando haya forma de agregar productos
-// cartItems = productsList.slice(1, 10); 
+cartItems = productsList.slice(1, 10); 
 
             // funcion para crear los eventos del boton de borrar
 const createDeleteButtons = () => {
