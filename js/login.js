@@ -4,38 +4,30 @@ const iniciar = document.querySelector('#iniciar');
 const registro = document.querySelector('#registro');
 //Se oculta formulario de registro al pulsar iniciar
 
-document.querySelector('#formRegistro').style.display = 'none';
-
-iniciar.addEventListener('click', () => {
-    document.querySelector('#formLogin').style.display = 'block';
-    document.querySelector('#formRegistro').style.display = 'none';
-});
-//Se oculta formulario de iniciar al pulsar registro
-registro.addEventListener('click', () => {
-
-    document.querySelector('#formLogin').style.display = 'none';
-    document.querySelector('#formRegistro').style.display = 'block';
-});
-
-
-
- /*------------TABS FORMULARIO--------*/
+/*------------TABS FORMULARIO--------*/
 const tabLink=document.querySelectorAll('.tab-link');
-const formularios=document.querySelectorAll('.formulario');
+document.querySelector('#formRegistro').style.display = 'none';
+iniciar.addEventListener('click', () => {
+     document.querySelector('#formLogin').style.display = 'block';
+     document.querySelector('#formRegistro').style.display = 'none';
+});
+// //Se oculta formulario de iniciar al pulsar registro
+ registro.addEventListener('click', () => {
 
+     document.querySelector('#formLogin').style.display = 'none';     
+     document.querySelector('#formRegistro').style.display = 'block';
+});
 for(let x=0; x<tabLink.length;x++){
     tabLink[x].addEventListener('click',()=>{
         //removemos la clase active de todos los tabs encontrados
         tabLink.forEach((tab)=> tab.classList.remove('active'));
 
         //le agregamos la clase active al tab que se le hizo click
-        tabLink[x].classList.add('active');
-
-        //mostramos el formulario correspondiente
-        formularios.forEach((form)=>form.classList.remove('active'));
-        formularios[x].classList.add('active');
+        tabLink[x].classList.add('active');        
     })        
 }
+
+
 /*---------------MOSTRAR CONTRASEÑA-----------*/
 const mostrarClave=document.querySelectorAll('.mostrarClave');
 const inputPass=document.querySelectorAll('.clave');
@@ -65,12 +57,25 @@ for(let i=0; i<mostrarClave.length;i++){
 }
 
 /*------------------VALIDAMOS EL FORMULARIO DE REGISTRO-----¨*/
-let nombre,apellido,correo,password,cbx_notify,cbx_terminos;
 
+
+let nombre,apellido,correo,password,password2,cbx_notify,cbx_terminos;
+
+/*------------------VALIDACION DE QUE COINCIDAN LOS PASSWORD -----¨*/
+// function verificasPasswords(){
+//     pass1 = document.getElementById('#pass1');
+//     pass2 = document.getElementById('#pass2');
+
+//     if(pass1.value != pass2.value){
+//         // Si las contrasenias no coinciden
+//         mostrarError('Las contraseñas no coinciden',msError);
+//     }
+// }
 if(document.getElementById('btnRegistro')){
     const btnRegistro=document.getElementById('btnRegistro');
     //evento click al boton registrar
     btnRegistro.addEventListener('click',(e)=>{
+        console.log("click");
         e.preventDefault();
         const msError=document.querySelector('#formRegistro .error-text');
         msError.innerHTML="";
@@ -79,7 +84,7 @@ if(document.getElementById('btnRegistro')){
         nombre = formRegistro.nombre.value.trim();
         apellido = formRegistro.apellido.value.trim();
         password = formRegistro.password.value.trim();
-
+        correo = formRegistro.correo.value.trim();
         cbx_notify=formRegistro.cbx_notify;
         cbx_terminos=formRegistro.cbx_terminos;
 
@@ -93,7 +98,7 @@ if(document.getElementById('btnRegistro')){
             return false;
         }else{
             //removemos esa clase con la sigueinte funcion
-            inputErrorRemove([formRegistro.nombre,formRegistro.apellido,formRegistro.correo,formRegistro.password])
+            //inputErrorRemove([formRegistro.nombre,formRegistro.apellido,formRegistro.correo,formRegistro.password])
         }
 
         //validamos a cada input
@@ -103,7 +108,7 @@ if(document.getElementById('btnRegistro')){
             formRegistro.nombre.focus();//fijamos en el elemento indicado
             return false;
         }else{
-            if(!validamosSoloLetras(nombre)){
+            if(!validarSoloLetras(nombre)){
                 //si es diferente a true
                 mostrarError('Ingrese un nombre válido, no se permiten caracteres especiales',msError);
                 inputError([formRegistro.nombre]);
@@ -120,7 +125,7 @@ if(document.getElementById('btnRegistro')){
             formRegistro.apellido.focus();
             return false;
         }else{
-            if(!validamosSoloLetras(apellido)){
+            if(!validarSoloLetras(apellido)){
                 mostrarError('Ingrese un apellido válido, no se permiten caracteres especiales',msError);
                 inputError([formRegistro.apellido]);
                 formRegistro.apellido.focus();
@@ -136,7 +141,7 @@ if(document.getElementById('btnRegistro')){
             return false;
         }else{
             if(!validarCorreo(correo)){
-                mostrarError('Por favor ingrese un correo valido',msError);
+                mostrarError('Por favor ingrese su correo escolar',msError);
                 inputError([formRegistro.correo]);
                 formRegistro.correo.focus();
                 return false;
@@ -169,7 +174,7 @@ if(document.getElementById('btnRegistro')){
             formRegistro.cbx_terminos.parentNode.classList.remove('cbx-error');            
         }
         //una vez hechas las verificaciones enviaremos el formulario para luego recibirlo con php
-        formRegistro.submit();
+        //formRegistro.submit();
         return true;
     });
 
@@ -198,7 +203,7 @@ if(document.getElementById('btnLogin')){
             inputError([formLogin.correo,formLogin.password]);
             return false;
         }else{
-            inputErrorRemove([formLogin.correo,formLogin.password]);
+           // inputErrorRemove([formLogin.correo,formLogin.password]);
         }
 
         if(correo=="" || correo==null){
@@ -250,12 +255,41 @@ function validarSoloLetras(valor){
 }
 
 /*-----------VALIDAR CORREO----------------*/
+/*expresion regular para validar correos electronicos que tengan el dominio de escuelas en mexico como:
+unam.mx (Universidad Nacional Autónoma de México)
+tec.mx (Instituto Tecnológico de Estudios Superiores de Monterrey)
+uam.mx (Universidad Autónoma Metropolitana)
+ipn.mx (Instituto Politécnico Nacional)
+udg.mx (Universidad de Guadalajara)
+uaemex.mx (Universidad Autónoma del Estado de México)
+uabc.mx (Universidad Autónoma de Baja California)
+uanl.mx (Universidad Autónoma de Nuevo León)
+uv.mx (Universidad Veracruzana)
+buap.mx (Benemérita Universidad Autónoma de Puebla)
+uaem.mx (Universidad Autónoma del Estado de Morelos)
+*/
+function validarCorreo(valor){
+    if(!/^[a-zA-Z0-9_.+-]+@(unam|tec|uam|ipn|udg|uaemex|uabc|uanl|uv|buap|uaem).mx$/.test(valor)){
+        return false;
+    }
+    return true;
+}
+/*
+function validarCorreo(valor){
+    if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(valor)){
+        return false;
+    }
+    return true;
+}
+*/
+/*
 function validarCorreo(valor){
     if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(valor)){
         return false;
     }
     return true;
 }
+*/
 
 /*-------------VALIDAR SOLO NUMEROS --------------*/
 function validarSoloNumeros(valor){
