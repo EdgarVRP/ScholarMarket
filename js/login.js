@@ -84,7 +84,7 @@ if(document.getElementById('btnRegistro')){
         nombre = formRegistro.nombre.value.trim();
         apellido = formRegistro.apellido.value.trim();
         password = formRegistro.password.value.trim();
-        password2 = formRegistro.password2.value.trim();
+        // password2 = formRegistro.password2.value.trim();
         correo = formRegistro.correo.value.trim();
         telefono = formRegistro.telefono.value.trim();
         //obtniendo el valor de la institucion a partir de un select

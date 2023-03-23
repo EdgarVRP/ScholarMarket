@@ -26,3 +26,63 @@ export const productsList = [
     new Products(10, 1, 'Pulsera', 'Pulsera de plata con piedras preciosas. Esta pulsera está elaborada con plata de alta calidad y cuenta con piedras preciosas incrustadas en su diseño, lo que la hace un accesorio elegante y sofisticado. Perfecta para darle un toque de glamour a cualquier atuendo, esta pulsera es una excelente adición a cualquier colección de joyería.', 149.99, 5, 'https://http2.mlstatic.com/D_NQ_NP_969203-MLM31700917903_082019-O.webp')
 ];
 
+
+
+
+function updateProducts() {
+    console.log("Si furulo");
+    // Obtener el contenedor donde se mostrarán los productos 
+    const productContainer = document.getElementById("productContainer");
+
+
+    // Recorrer el array de productos del carrito y añadir cada uno al productContainer
+    productsList.forEach((item) => {
+        // Crear una fila para el producto
+        const product = document.createElement("div");
+
+        product.className = "product-card";
+
+        // Añadir la imagen, el nombre, el precio, la cantidad y el subtotal de cada producto en nuestro array
+        product.innerHTML = `
+            <div class="d-flex justify-content-center align-items-center">
+                <img class="img-products img-fluid" src="${item.img}" alt="${item.name}">
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center flex-wrap">
+                <h3 class="item-name twhite m-3"> <b>${item.name}</b></h3>
+                <h4 class="twhite m-3">$${(item.price).toFixed(2)}</h4>
+                <button class="add px-2 py-2 main-btn twhite" id=${item.id + 'add'}>
+                    Agregar al carrito
+                </button>
+            </div>
+            
+            
+        `;
+        let botones =  document.getElementsByClassName('main-btn');
+        // Añadir la fila al tbody
+        productContainer.appendChild(product);
+
+        product.addEventListener("mouseover", function (event) {
+            //highlight the mouseover target
+            product.innerHTML = `
+                <div class="d-flex justify-content-center align-items-center">
+                    <img class="img-products img-fluid" src="${item.img}" alt="${item.name}">
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center flex-wrap">
+                    <h3 class="item-name twhite m-3"> <b>${item.name}</b></h3>
+                    <h4 class="twhite m-3">$${(item.price).toFixed(2)}</h4>
+                    <button class="add px-2 py-2 ma btn-azulito twhite" id=${item.id + 'add'}>
+                        Agregar al carrito
+                    </button>
+                </div>
+            `;
+
+            
+        });
+
+        // botones.onove
+    });
+
+    
+}
+
+updateProducts();

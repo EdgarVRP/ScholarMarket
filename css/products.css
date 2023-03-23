@@ -1,0 +1,69 @@
+.product-card{
+    width: 350px;
+    height: auto;
+    background-color: #a7d2cb;
+    border-radius: 5%;
+    margin: 20px;
+    padding: 10px;
+}
+
+.product-card:hover{
+    background-color: #874c62;
+    -webkit-transform:scale(1.05);
+    -moz-transform:scale(1.05);
+    -ms-transform:scale(1.05);
+    -o-transform:scale(1.05);
+    transform:scale(1.05);
+    transition-duration: 500ms;
+}
+
+.img-products{
+    width: auto;
+    height: 150px;
+}
+
+.btn-azulito{
+    background-color: #a7d2cb;
+}
+
+
+                                /* Aqui comienzan las media queries  */
+    
+    /* Estilos para dispositivos móviles */
+    @media only screen and (max-width: 767px) {
+    
+        /* Estilos para dispositivos con ancho máximo de 767px */
+        
+    }
+    
+    
+    /* Estilos para tabletas */
+    @media only screen and (min-width: 768px) {
+    
+        /* Estilos para dispositivos con ancho mínimo de 768px y ancho máximo de 1080px */
+        .img-products{
+            width: auto;
+            height: 140px;
+        }
+
+    }
+    
+    
+    /* Estilos para pantallas de escritorio */
+    @media only screen and (min-width: 1080px) {
+    
+        /* Estilos para dispositivos con ancho mínimo de 1080px y ancho máximo de 1400px */
+        .img-products{
+            width: auto;
+            height: 150px;
+        }
+    }
+    
+    @media only screen and (min-width: 1400px) {
+        /* Estilos para dispositivos con ancho mínimo de 1400px */
+        
+        .img-products{
+            width: auto;
+            height: 160px;
+        }
+    }
