@@ -8,7 +8,7 @@ const swalWithBootstrapButtons = Swal.mixin({
 })
 
 // Traer productos desde products
-import {productsList} from './products.js';
+import {productsList} from './data.js';
 
 // Array que almacena los productos del carrito
 let cartItems = [];

@@ -26,6 +26,12 @@
     background-color: #a7d2cb;
 }
 
+#filters{
+    background-color: #f2d388;
+    height: 100vh;
+    border-radius: 5%;
+}
+
 
                                 /* Aqui comienzan las media queries  */
     
